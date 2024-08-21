@@ -1,13 +1,205 @@
-#main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+body {
+    font-family: "Helvetica Neue", "Roboto", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0f7fa, #f7f9fc);
+    color: #333;
 }
 
-#github-container {
-  display: flex;
+.main {
+    max-width: 1500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2.title {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+    padding: 12px;
+    width: 70%;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.search-button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.github-container {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.section-title {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
 }
 
 ul {
-  list-style: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s, box-shadow 0.3s;
+    border: 1px solid #ddd;
+}
+
+li:hover {
+    background: #d3d3d3;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    margin-left: auto;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.repos-list li {
+    background: #ffffff;
+    font-size: 0.95em;
+    border-left: 4px solid #007bff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.view-repo {
+    width: 140px;
+    margin-left: auto;
+    /* Align the button to the right */
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    /* Green background */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.view-repo:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.view-repos {
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+
+    margin-left: 30px;
+    /* Space between the link and the button */
+    padding: 5px 10px;
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.view-repos:hover {
+    background-color: #0056b3;
+    /* Darker on hover */
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.search-button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 800px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+    }
 }

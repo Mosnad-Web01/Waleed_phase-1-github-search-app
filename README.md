@@ -76,8 +76,8 @@ show all the repositories for that user.
 ## Bonus
 
 - Toggle the search bar between searching for users by keyword and searching for
-  repos by keyword by adding an extra button. Hint: you can use the same search
-  bar for this, but you may need to create a variable which stores what the
-  current search type is (user or repo). The endpoint to search repositories by
-  keyword is
-  [here](https://developer.github.com/v3/search/#search-repositories).
+repos by keyword by adding an extra button. Hint: you can use the same search
+bar for this, but you may need to create a variable which stores what the
+current search type is (user or repo). The endpoint to search repositories by
+keyword is
+[here](https://developer.github.com/v3/search/#search-repositories).
